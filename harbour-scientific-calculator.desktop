@@ -2,6 +2,6 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Name=SciCalculator
-Icon=harbour-scientific-calculator.png
+Icon=harbour-scientific-calculator
 Exec=harbour-scientific-calculator
 
