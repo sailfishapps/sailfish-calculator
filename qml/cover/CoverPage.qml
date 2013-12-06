@@ -52,6 +52,8 @@ CoverBackground {
             Label{
                 width: parent.width
                 text: calculator.formula_text+calculator.brackets_added
+                fontSizeMode: Text.HorizontalFit
+                verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
                 color: Theme.primaryColor
             }
@@ -59,6 +61,7 @@ CoverBackground {
             Label{
                 width: parent.width
                 text: '= ' + calculator.answer
+                elide: Text.ElideRight
             }
         }
     }
@@ -73,7 +76,7 @@ CoverBackground {
 
         Label{
             anchors.centerIn: parent
-            text: "SciCalc"
+            text: "√"
             color: Theme.secondaryColor
             font.pixelSize: Theme.fontSizeExtraLarge
         }

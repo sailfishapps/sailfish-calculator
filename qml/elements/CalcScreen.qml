@@ -65,6 +65,8 @@ Item{
                 horizontalAlignment: Text.AlignRight
                 font.family: Theme.fontFamily
                 font.pixelSize: Theme.fontSizeExtraLarge
+                fontSizeMode: Text.HorizontalFit
+                verticalAlignment: Text.AlignVCenter
                 text: formula
             }
             IconButton{
