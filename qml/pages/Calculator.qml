@@ -188,6 +188,11 @@ Page {
             memory.get(memory.count-1).answer = currentAnswer
         }
 
+        VerticalScrollDecorator {
+            flickable: formulaView
+            visible: memory.count > 1 ? true : false
+        }
+
         PushUpMenu {
             MenuItem {
                 property variant _modes: ["RAD", "DEG", "GRAD"];

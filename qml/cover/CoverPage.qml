@@ -32,12 +32,14 @@ CoverBackground {
     Rectangle {
         id: screen
         color: Theme.secondaryHighlightColor
+        width: parent.width -20
         anchors{
             top: parent.top
             left: parent.left
-            right: parent.right
+            topMargin: 10
+            leftMargin: 10
         }
-        height: column.height + 10
+        height: column.height + 20
 
         Column{
             id: column
@@ -51,6 +53,7 @@ CoverBackground {
             width: parent.width - 10
             Label{
                 width: parent.width
+                height: font.pixelSize + 5
                 text: calculator.formula_text+calculator.brackets_added
                 fontSizeMode: Text.HorizontalFit
                 verticalAlignment: Text.AlignVCenter
@@ -60,8 +63,10 @@ CoverBackground {
 
             Label{
                 width: parent.width
+                height: font.pixelSize + 5
                 text: '= ' + calculator.answer
                 elide: Text.ElideRight
+                verticalAlignment: Text.AlignVCenter
             }
         }
     }
