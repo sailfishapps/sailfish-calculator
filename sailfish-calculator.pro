@@ -23,4 +23,5 @@ OTHER_FILES += qml/harbour-scientific-calculator.qml \
     qml/elements/CalcScreen.qml \
     rpm/scientific-calculator.yaml \
     harbour-scientific-calculator.desktop \
-    harbour-scientific-calculator.png
+    harbour-scientific-calculator.png \
+    qml/elements/LocalStorage.qml

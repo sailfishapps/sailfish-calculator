@@ -37,6 +37,10 @@ Page {
     property string answer: '';
     property string angularUnit: "RAD"
 
+    onAngularUnitChanged: {
+        settings.setValue("angularUnit", angularUnit);
+    }
+
     property var formula: []
 
     function formulaPush(visual, engine, type) {
@@ -134,6 +138,10 @@ Page {
             }
         }
     }
+
+    LocalStorage {
+        id: settings
+    }
     
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaListView {
@@ -218,6 +226,14 @@ Page {
                     answer = calculate();
                 }
             }
+        }
+    }
+
+    Component.onCompleted: {
+        // Load settings
+        var ang = settings.getValue("angularUnit")
+        if (ang != null) {
+            angularUnit = ang
         }
     }
 }
