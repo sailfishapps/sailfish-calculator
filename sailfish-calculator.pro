@@ -21,7 +21,6 @@ OTHER_FILES += qml/harbour-scientific-calculator.qml \
     qml/elements/Memory.qml \
     qml/elements/KeyboardButton.qml \
     qml/elements/CalcScreen.qml \
-    rpm/harbour-scientific-calculator.spec \
     rpm/scientific-calculator.yaml \
     harbour-scientific-calculator.desktop \
     harbour-scientific-calculator.png

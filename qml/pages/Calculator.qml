@@ -195,10 +195,26 @@ Page {
 
         PushUpMenu {
             MenuItem {
-                property variant _modes: ["RAD", "DEG", "GRAD"];
-                text: "Change mode to %1".arg(_modes[(_modes.indexOf(angularUnit)+1)%3])
+                text: "DEG"
+                visible: !(angularUnit == text)
                 onClicked: {
-                    angularUnit = _modes[(_modes.indexOf(angularUnit)+1)%3];
+                    angularUnit = text;
+                    answer = calculate();
+                }
+            }
+            MenuItem {
+                text: "RAD"
+                visible: !(angularUnit == text)
+                onClicked: {
+                    angularUnit = text;
+                    answer = calculate();
+                }
+            }
+            MenuItem {
+                text: "GRAD"
+                visible: !(angularUnit == text)
+                onClicked: {
+                    angularUnit = text;
                     answer = calculate();
                 }
             }
