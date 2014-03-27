@@ -25,6 +25,8 @@
 
 .pragma library
 
+Qt.include("bignumber.js")
+
 // ----------------------------------------
 // constants (const keyword is not working)
 var MAX_DECIMAL = 13; // Number of maximum decimal positions
@@ -360,7 +362,7 @@ function Scanner(term, context) {
         if (!isNaN(token)) {
             if(prev.type === T_IDENT || prev.type === T_PCLOSE)
                 this.tokens.push(new Token('*', T_TIMES));
-            this.tokens.push(prev = new Token(parseFloat(token), T_NUMBER));
+            this.tokens.push(prev = new Token(new BN(parseFloat(token), T_NUMBER)));
             continue;
         }
 
